@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 const { Schema, model } = mongoose;
 
 const moveSchema = new Schema({
+  type: { type: String },
   player: String,
   card: String,
 });
@@ -9,13 +10,14 @@ const moveSchema = new Schema({
 const playerSchema = new Schema({
   gameId: String,
   socketId: String,
-  player: Number,
+  id: Number,
+  cards: Array,
 });
 
 const gameSchema = new Schema({
   gameId: String,
   owner: { type: Number, default: 1 },
-  players: [{ socketId: String, gameId: String, id: Number, cards: [] }],
+  players: [{ socketId: String, gameId: String, id: Number, cards: Array }],
   moves: [{ type: { type: String }, player: String, card: String }],
   state: { type: String, default: "idle" },
 });
