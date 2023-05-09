@@ -89,17 +89,14 @@ const GamePlay = ({
           <FaceUpCard card={gameState.topCard} />
         </Col>
         <Col className="m-auto d-flex justify-content-center">
-          {gameState.deck.length > 0 && (
-            <>
-              <FaceDownCard
-                topCard={gameState.topCard}
-                currentPlayer={currentPlayer}
-                currentPlayerCards={gameState.playerCards[currentPlayer]}
-                turn={turn}
-                pickCard={pickCard}
-              />
-            </>
-          )}
+          <FaceDownCard
+            deck={gameState.deck}
+            topCard={gameState.topCard}
+            currentPlayer={currentPlayer}
+            currentPlayerCards={gameState.playerCards[currentPlayer]}
+            turn={turn}
+            pickCard={pickCard}
+          />
         </Col>
       </Row>
       <Row style={{ height: "35%" }}>
