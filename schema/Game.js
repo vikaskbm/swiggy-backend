@@ -1,18 +1,20 @@
 import mongoose from "mongoose";
 const { Schema, model } = mongoose;
 
-const moveSchema = new Schema({
-  type: { type: String },
-  player: String,
-  card: String,
-});
+// Commented out because a lot of changes were being made. Will be integrated once schema for moves is final
+// const moveSchema = new Schema({
+//   type: { type: String },
+//   player: String,
+//   card: String,
+// });
 
-const playerSchema = new Schema({
-  gameId: String,
-  socketId: String,
-  id: Number,
-  cards: Array,
-});
+// Commented out because a lot of changes were being made. Will be integrated once schema for player is final
+// const playerSchema = new Schema({
+//   gameId: String,
+//   socketId: String,
+//   id: Number,
+//   cards: Array,
+// });
 
 const gameSchema = new Schema({
   gameId: String,
