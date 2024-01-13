@@ -3,11 +3,7 @@ import mongoose from "mongoose";
 
 // Test database
 const URI =
-  "mongodb+srv://vikasbishnoi:sI0lwb6n3S2YtB63@swiggy-assignment.8cznrxq.mongodb.net/?retryWrites=true&w=majority";
-
-// Prod database
-// const URI =
-//   "mongodb+srv://vikasbishnoi:sI0lwb6n3S2YtB63@swiggy-assignment.8cznrxq.mongodb.net/unodb?retryWrites=true&w=majority";
+  "mongodb+srv://vikaskbm:arC4Onb2SUJOOh0m@prod.rlazxar.mongodb.net/?retryWrites=true&w=majority";
 
 export const initializeDatabase = (callback) => {
   const options = {
